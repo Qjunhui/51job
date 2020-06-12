@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- SITE TITLE -->
+	<title>找工作，上51job</title>
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/css/templatemo-style.css">
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body data-spy="scroll" data-target="#rock-navigation">
+<div class="adcenter"><script src="http://www.cssmoban.com/include/new/ggad2_728x90.js"></script></div>
+	<!-- START NAVIGATION -->
+	<div role="navigation">
+		<div class="container" style="height: 55px;">
+			<nav id="rock-navigation">
+				<ul>
+					<li style="display:inline;float: left;margin: 0 5px;"><a href="/" class="smoothScroll">Home</a></li>
+					<li style="display:inline;float: left;margin: 0 5px;"><a href="/main" class="smoothScroll">Main</a></li>
+					<li style="display:inline;float: left;margin: 0 5px;"><a href="/educate" class="smoothScroll">Educate</a></li>
+					<li style="display:inline;float: left;margin: 0 5px;"><a href="/word" class="smoothScroll">Word</a></li>
+					<li style="display:inline;float: left;margin: 0 5px;"><a href="/about" class="smoothScroll">About</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+	<!-- END NAVIGATION -->
+
+	<!-- START work -->
+	<section id="main">
+		<div class="container">
+             <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>序号</th>
+                          <th>岗位名称</th>
+                          <th>工作区域</th>
+                          <th>公司名字</th>
+                          <th>薪资</th>
+                          <th>学历要求</th>
+                          <th>工作内容</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                       {% for msg in msgs %}
+                        <tr>
+                              <td>{{ msg[0] }}</td>
+                              <td>
+                                  <a href="{{ msg[1] }}" target="_blank">
+                                      {{ msg[2] }}
+                                  </a>
+                              </td>
+                              <td>{{ msg[3] }}</td>
+                              <td>{{ msg[4] }}</td>
+                              <td>{{ msg[5] }}</td>
+                              <td>{{ msg[6] }}</td>
+                              <td>{{ msg[7] }}</td>
+                            </tr>
+                       {% endfor %}
+                  </tbody>
+              </table>
+		</div>
+	</section>
+	<!-- END work -->
+
+	<script src="static/js/jquery.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js/smoothscroll.js"></script>
+	<script src="static/js/jquery.nav.js"></script>
+	<script src="static/js/isotope.js"></script>
+	<script src="static/js/imagesloaded.min.js"></script>
+	<script src="static/js/custom.js"></script>
+</body>
+</html>
